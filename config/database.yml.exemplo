@@ -1,0 +1,19 @@
+default: &defaults
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  username: user
+  password: senha
+  host: localhost
+
+development:
+  <<: *defaults
+  database: exemplo_activerecord_development
+
+test:
+  <<: *defaults
+  database: exemplo_activerecord_test
+
+production:
+  <<: *defaults
+  database: exemplo_activerecord_production
